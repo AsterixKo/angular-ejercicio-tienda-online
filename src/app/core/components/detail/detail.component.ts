@@ -1,3 +1,4 @@
+import { switchMap } from 'rxjs/operators';
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { Product, ProductsService } from 'src/app/shared/services/products.service';
@@ -14,7 +15,7 @@ export class DetailComponent implements OnInit {
   constructor(private route: ActivatedRoute, private productsService: ProductsService) { }
 
   ngOnInit(): void {
-    this.route.queryParams.subscribe(params => {
+    this.route.params.subscribe(params => {
       console.log('El id es:', params['id']);
       this.id = params['id'];
     });

@@ -3,7 +3,8 @@
 <div *ngFor="let product of products" class="box">
   <h3>Nombre: {{product.name}}</h3>
   <div class="box-image"><img src="{{product.src}}"></div>
-  <span>Id: {{product.id}}</span><br><br>
-  <p>Description: {{product.description}}</p><br><br>
-  <span>Precio: {{product.prize}} €</span><br><br>
+  <span>Id: {{product.id}}</span><br>
+  <p>Description: {{product.description}}</p>
+  <span>Precio: {{product.prize}} €</span><br>
+  <a [routerLink]="['/detail', product.id]">Ver Detalle</a>
 </div>
