@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "angular-ejercicio-tienda-online"
+    }
+  },
+  "defaultProject": "angular-ejercicio-tienda-online",
+  "cli": {
+    "analytics": "1a3b44b1-474a-4846-be48-0bff53beff21"
+  }
 }
