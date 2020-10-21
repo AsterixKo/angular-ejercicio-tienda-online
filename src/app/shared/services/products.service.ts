@@ -22,7 +22,7 @@ export class ProductsService {
   }
 }
 
-class Product {
+export class Product {
   _id: number;
   _name: string;
   _description: string;
@@ -33,7 +33,7 @@ class Product {
     this._name = name;
     this._description = description;
     this._prize = prize;
-    this._src = src,
+    this._src = src;
   }
 
   get id(): number {
