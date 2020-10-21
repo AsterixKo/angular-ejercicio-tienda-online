@@ -7,6 +7,7 @@ export class ProductsService {
 
   products: Product[];
   constructor() {
+    console.log('ProductsService.constructor');
     this.products = [
       new Product(1, 'DVDs', 'Discos dvd para grabar', 10, 'assets/image/dvd.png'),
       new Product(2, 'HP PRO M15A Impresora Láser Monocromo', 'Obtenga una impresión rápida que se adapta a su espacio y presupuesto. Produzca continuamente impresiones de calidad profesional. Obtenga un rápido rendimiento con la impresora láser más pequeña del mundo de su categoría y termine rápidamente sus proyectos.', 79.99, 'assets/image/impresora.jpg'),
@@ -19,6 +20,21 @@ export class ProductsService {
 
   getProducts(): Product[] {
     return this.products;
+  }
+
+  getProductById(id: number): Product {
+    console.log('getProductById:', id);
+    let result: Product;
+    let idProductExist: boolean = false;
+    for (let i = 0; i < this.products.length && !idProductExist; i++) {
+      console.log('iteracion:',i);
+      if (this.products[i].id == id) {
+        idProductExist = true;
+        result = this.products[i];
+      }
+    }
+    console.log('getProductById_result:', result);
+    return result;
   }
 }
 
