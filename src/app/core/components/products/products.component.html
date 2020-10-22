@@ -3,6 +3,6 @@
 <div *ngFor="let product of products" class="box">
 
   <app-product-card [id]="product.id" [name]="product.name" [description]="product.description" [prize]="product.prize"
-    [src]="product.src">
+    [src]="product.src" [quantity]="product.quantity">
   </app-product-card>
 </div>
