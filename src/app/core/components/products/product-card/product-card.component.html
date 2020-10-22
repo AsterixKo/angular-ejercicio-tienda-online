@@ -4,4 +4,5 @@
 <p>Description: {{description}}</p>
 <span>Precio: {{prize}} €</span><br>
 <span>Cantidad: {{quantity}} €</span><br>
+<button class="btn btn-info" (click)="incrementarCantidad()">Incrementar cantidad</button><br>
 <a [routerLink]="['/detail', id]">Ver Detalle</a>

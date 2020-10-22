@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-product-card',
@@ -12,11 +12,20 @@ export class ProductCardComponent implements OnInit {
   @Input() description: string;
   @Input() prize: number;
   @Input() src: string;
-  @Input() quantity: string;
+  @Input() quantity: number;
+
+  @Output() parametroSalida = new EventEmitter<number>();
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  incrementarCantidad() {
+    console.log('Incrementar cantidad', this.quantity);
+    this.quantity = this.quantity + 1;
+    this.parametroSalida.emit(this.quantity);
+    console.log('Incrementada cantidad', this.quantity);
   }
 
 }
