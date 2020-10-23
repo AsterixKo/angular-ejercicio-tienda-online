@@ -2,3 +2,7 @@
     <li><a routerLink="how" routerLinkActive="active">How it works</a></li>
     <li><a routerLink="products" routerLinkActive="active">Products</a></li>
   </ul>
+  <div>
+    <input type="text" [(ngModel)]="search">
+    <button type="button" [routerLink]="['/search', search]">Buscar</button>
+  </div>

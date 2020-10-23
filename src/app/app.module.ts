@@ -9,6 +9,8 @@ import { HowComponent } from './core/components/how/how.component';
 import { ProductsComponent } from './core/components/products/products.component';
 import { DetailComponent } from './core/components/detail/detail.component';
 import { ProductCardComponent } from './core/components/products/product-card/product-card.component';
+import { FormsModule } from '@angular/forms';
+import { SearchResultsComponent } from './core/components/search-results/search-results.component';
 
 @NgModule({
   declarations: [
@@ -18,11 +20,13 @@ import { ProductCardComponent } from './core/components/products/product-card/pr
     HowComponent,
     ProductsComponent,
     DetailComponent,
-    ProductCardComponent
+    ProductCardComponent,
+    SearchResultsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

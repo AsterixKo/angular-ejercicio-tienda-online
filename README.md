@@ -21,3 +21,13 @@ Haz llegar al componente product-card, el nombre del producto mediante la direct
 ### PRO
 Crea una propiedad en tu array de productos que se llame quantity/cantidad.
 Crea un botón “añadir unidad” en el product-card que incremente las unidades del producto clicado en +1. * Utiliza la directiva @Output.
+
+## Ampliación tienda online
+
+crea un buscador en el header de tu aplicación
+
+Utiliza los servicios para encontrar los productos/publicaciones/muebles de tu aplicación
+
+Crea un componente principal nuevo que se llame search-results
+
+Utiliza componentes reutilizables en tu nuevo componente search-results

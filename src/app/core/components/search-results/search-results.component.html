@@ -1,0 +1,8 @@
+<h1>Search Productos: {{search}}</h1>
+
+<div *ngFor="let product of products" class="box">
+
+  <app-product-card [id]="product.id" [name]="product.name" [description]="product.description" [prize]="product.prize"
+    [src]="product.src" [quantity]="product.quantity" (parametroSalida)="product.quantity = $event">
+  </app-product-card>
+</div>

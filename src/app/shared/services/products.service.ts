@@ -36,6 +36,22 @@ export class ProductsService {
     console.log('getProductById_result:', result);
     return result;
   }
+
+  findProducts(searchTerms: string): Product[] {
+
+    const searchTermsArray: string[] = searchTerms.split(' ');
+    let productsFound: Product[] = [];
+
+    for (const product of this.products) {
+      for (const term of searchTermsArray) {
+        if (product.name.toLowerCase().indexOf(term.toLowerCase()) != -1 || product.description.toLowerCase().indexOf(term.toLowerCase()) != -1) {
+          console.log('product found', product);
+          productsFound.push(product);
+        }
+      }
+    }
+    return productsFound;
+  }
 }
 
 export class Product {
